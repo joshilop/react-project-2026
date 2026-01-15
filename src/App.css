@@ -1,0 +1,39 @@
+.contenedor {
+  display: grid;
+  /* Define 3 columnas de igual ancho (1fr) */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Espacio entre las tarjetas */
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+}
+
+/* Estilos para el único <li> que actúa como contenedor de la cuadrícula */
+.contenedor > li {
+  display: contents; /* Hace que los hijos del li actúen como hijos directos del contenedor */
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Para responsividad */
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+  }
+}
