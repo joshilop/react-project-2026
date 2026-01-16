@@ -1,0 +1,36 @@
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.perfil-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 90%;
+}
+
+.perfil-card h1 {
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.perfil-card p {
+    color: #ecf0f1;
+    font-size: 1.1rem;
+}
+
+.perfil-card span {
+    color: #bdc3c7;
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}

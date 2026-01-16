@@ -1,0 +1,123 @@
+/* Contenedor Principal con Grid */
+.cripto-page-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Columna info 1 parte, Tabla 2 partes */
+    gap: 3rem;
+    padding: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Columna Izquierda: Título e Info */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cripto-header {
+    margin-bottom: 2rem;
+}
+
+.cripto-header h1 {
+    font-size: 2.5rem;
+    color: #00d4ff; /* Un azul cyan para resaltar el nombre */
+    margin-bottom: 0.5rem;
+}
+
+.symbol {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+
+/* Tarjeta de Información */
+.info-card {
+    background: rgba(255, 255, 255, 0.05); /* Fondo casi invisible */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.label {
+    color: #95a5a6;
+}
+
+.value {
+    font-weight: bold;
+}
+
+.price {
+    color: #2ecc71; /* Verde neón para el precio */
+    font-size: 1.2rem;
+}
+
+/* Columna Derecha: Tabla */
+.history-section h2 {
+    color: #00d4ff;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.history-table {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow-y: auto;
+    max-height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #1a1a2e; /* Fondo sólido para el header de la tabla */
+    position: sticky;
+    top: 0;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ecf0f1;
+}
+
+/* Colores de variación */
+.positivo { color: #2ecc71; }
+.negativo { color: #e74c3c; }
+
+/* Scrollbar personalizada para que no se vea fea */
+.history-table::-webkit-scrollbar {
+    width: 6px;
+}
+.history-table::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cripto-page-container {
+        grid-template-columns: 1fr;
+    }
+}
